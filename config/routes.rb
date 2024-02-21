@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :restaurants, only: %i[new create show index] do
-    resources :reviews, only: %i[new create]
+    resources :reviews, only: %i[create find]
   end
   # # GET THEM ALL
   # get "restaurants", to: "restaurants#index"
